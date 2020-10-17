@@ -1,6 +1,13 @@
-<h1>Current article</h1>
-
-<h3> <%= @article.title %> </h3>
+<h2>
+  <%= @article.title %>
+  <%= link_to ' <i class="far fa-edit"></i>'.html_safe, edit_article_path %>
+  <%= link_to "<i class='far fa-trash-alt'></i>".html_safe,
+              article_path(@article),
+              method: :delete,
+              data: { confirm: "Are you sure :(?" } %>
+</h2>
 <p><%= @article.content %> </p>
 
-<%= link_to "Go back to all the articles", articles_path %>
+<p>
+  <%= link_to '<i class="fas fa-reply-all"></i>'.html_safe, articles_path %>
+</p>

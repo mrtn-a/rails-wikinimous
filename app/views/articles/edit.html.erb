@@ -1,0 +1,13 @@
+<h1>Edit this article:</h1>
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+
+<p>
+  <%= link_to '<i class="fas fa-reply-all"></i> Back to all the articles'.html_safe, articles_path %>
+</p>
