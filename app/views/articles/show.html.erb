@@ -6,7 +6,10 @@
               method: :delete,
               data: { confirm: "Are you sure :(?" } %>
 </h2>
-<p><%= @article.content %> </p>
+
+<blockquote>
+  <p><%= @article.content %> </p>
+</blockquote>
 
 <p>
   <%= link_to '<i class="fas fa-reply-all"></i>'.html_safe, articles_path %>
