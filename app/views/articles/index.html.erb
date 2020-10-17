@@ -1,11 +1,12 @@
-<h1>My Wikinimous 📚</h1>
+<div class="box">
+  <h1>My Wikinimous 📚</h1>
+  <p>
+    <ul>
+      <% @articles.each do |article| %>
+        <li><%= link_to article.title, article_path(article) %></li>
+      <% end %>
+    </ul>
+  </p>
+  <%= link_to '<i class="fas fa-plus"></i> Add a new article'.html_safe, new_article_path %>
+</div>
 
-<p>
-  <ul>
-    <% @articles.each do |article| %>
-      <li><%= link_to article.title, article_path(article) %></li>
-    <% end %>
-  </ul>
-</p>
-
-<%= link_to '<i class="fas fa-plus"></i> Add a new article'.html_safe, new_article_path %>
